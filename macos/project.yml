@@ -1,0 +1,117 @@
+name: CleanDock
+options:
+  bundleIdPrefix: de.hypeit
+  deploymentTarget:
+    macOS: "15.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Ad-hoc signing so unsigned local builds always work.
+    # Release signing is done inside-out by Scripts/make-pkg.sh (DEVELOPER_ID_APP).
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+
+packages:
+  CleanDockCore:
+    path: Core
+
+targets:
+  CleanDock:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+    dependencies:
+      - package: CleanDockCore
+      # Target named cli-cleandock: a target named "cleandock" would collide
+      # with the app target "CleanDock" in the case-insensitive intermediates
+      # directory. The built product is still named "cleandock".
+      - target: cli-cleandock
+        embed: false
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleName: CleanDock
+        CFBundleDisplayName: CleanDock
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDevelopmentRegion: en
+        LSApplicationCategoryType: public.app-category.utilities
+        NSHumanReadableCopyright: Copyright © 2026 hypeit GmbH. MIT License.
+        NSPrincipalClass: NSApplication
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_NAME: CleanDock
+        PRODUCT_BUNDLE_IDENTIFIER: de.hypeit.cleandock
+        # App Sandbox stays OFF (non-negotiable): the app writes the
+        # com.apple.dock preferences domain and runs `killall Dock`.
+        # There is deliberately no entitlements file.
+        ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # The AccentColor colorset is deliberately empty: the app follows
+        # the user's system accent color.
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        # Only this target runs a post-build script ("Embed CLI Tool"), which
+        # writes into the app bundle product - the script sandbox blocks that
+        # even with declared outputs. Scoped here so the CLI target keeps the
+        # default sandboxing.
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+    postBuildScripts:
+      # Embed the CLI at CleanDock.app/Contents/Helpers/cleandock.
+      # NOT Contents/MacOS: on a case-insensitive filesystem "cleandock"
+      # would overwrite the app binary "CleanDock" there.
+      - name: Embed CLI Tool
+        script: |
+          mkdir -p "${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/Helpers"
+          cp -f "${BUILT_PRODUCTS_DIR}/cleandock" "${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/Helpers/cleandock"
+        inputFiles:
+          - $(BUILT_PRODUCTS_DIR)/cleandock
+        outputFiles:
+          - $(BUILT_PRODUCTS_DIR)/$(CONTENTS_FOLDER_PATH)/Helpers/cleandock
+
+  cli-cleandock:
+    type: tool
+    platform: macOS
+    sources:
+      - path: CLI
+    dependencies:
+      - package: CleanDockCore
+    settings:
+      base:
+        PRODUCT_NAME: cleandock
+        PRODUCT_BUNDLE_IDENTIFIER: de.hypeit.cleandock.cli
+        ENABLE_HARDENED_RUNTIME: YES
+        SKIP_INSTALL: YES
+
+schemes:
+  CleanDock:
+    build:
+      targets:
+        CleanDock: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        # The whole test suite lives in the local CleanDockCore package;
+        # without this reference, ⌘U would run zero tests and report green.
+        - package: CleanDockCore/CleanDockCoreTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+  cli-cleandock:
+    build:
+      targets:
+        cli-cleandock: all
+    run:
+      config: Debug

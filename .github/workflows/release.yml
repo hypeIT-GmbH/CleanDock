@@ -1,0 +1,79 @@
+name: Release
+
+# On every v* tag: build an UNSIGNED PKG and attach it to a draft release.
+# The maintainer signs + notarizes locally (macos/Scripts/notarize.sh) and
+# replaces the asset before publishing. Deliberately no signing certificates
+# as CI secrets - smaller attack surface.
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup and test
+        uses: ./.github/actions/setup-and-test
+
+      # The tag must match both hardcoded version constants, otherwise the PKG
+      # receipt and the app/CLI would report different versions.
+      - name: Verify tag matches project versions
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          grep -qF "MARKETING_VERSION: \"$VERSION\"" macos/project.yml || {
+            echo "error: tag v$VERSION does not match MARKETING_VERSION in macos/project.yml" >&2
+            exit 1
+          }
+          grep -qF "version = \"$VERSION\"" macos/Core/Sources/CleanDockCore/CleanDockInfo.swift || {
+            echo "error: tag v$VERSION does not match CleanDockInfo.version in macos/Core/Sources/CleanDockCore/CleanDockInfo.swift" >&2
+            exit 1
+          }
+          grep -qF "## [$VERSION]" CHANGELOG.md || {
+            echo "error: CHANGELOG.md has no \"## [$VERSION]\" section - releases ship with a changelog excerpt" >&2
+            exit 1
+          }
+
+      # The release body carries the CHANGELOG section for this version -
+      # every release ships with its changelog excerpt.
+      - name: Extract changelog section
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          awk -v ver="$VERSION" '
+            $0 ~ "^## \\[" ver "\\]" { grab = 1; next }
+            grab && /^## \[/ { exit }
+            # Keep-a-Changelog link reference definitions at the file end
+            # are invisible in rendered GFM but noise in the raw body.
+            grab && /^\[.*\]: / { next }
+            grab { print }
+          ' CHANGELOG.md > release-notes.md
+          grep -q '[^[:space:]]' release-notes.md || {
+            echo "error: the CHANGELOG section for $VERSION is empty" >&2
+            exit 1
+          }
+          {
+            echo ""
+            echo "---"
+            echo "Unsigned CI build - the maintainer replaces this asset with the"
+            echo "signed and notarized PKG before publishing."
+            echo ""
+            echo "CleanDock is free and open source. If it saves you time:"
+            echo "☕ https://buymeacoffee.com/cleandock"
+          } >> release-notes.md
+
+      - name: Build PKG
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          VERSION="$VERSION" macos/Scripts/make-pkg.sh
+
+      - name: Create draft release with PKG artifact
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
+        with:
+          draft: true
+          files: macos/build/CleanDock-*.pkg
+          body_path: release-notes.md

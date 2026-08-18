@@ -1,0 +1,13 @@
+#!/bin/bash
+# CleanDock PKG postinstall: bootstrap the LaunchAgent for the currently
+# logged-in user so managed profiles apply without requiring a logout/login.
+PLIST="/Library/LaunchAgents/de.hypeit.cleandock.apply.plist"
+consoleUser=$(stat -f%Su /dev/console 2>/dev/null || true)
+if [[ -n "$consoleUser" && "$consoleUser" != "root" && "$consoleUser" != "loginwindow" ]]; then
+  uid=$(id -u "$consoleUser")
+  # Bootout first so upgrades reload the updated agent; on a fresh install
+  # there is nothing to boot out and the failure is harmless.
+  launchctl bootout gui/"$uid" "$PLIST" 2>/dev/null || true
+  launchctl bootstrap gui/"$uid" "$PLIST" 2>/dev/null || true
+fi
+exit 0

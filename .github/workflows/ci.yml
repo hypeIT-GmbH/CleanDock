@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# The workflow only builds and tests - it never needs write access.
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup and test
+        uses: ./.github/actions/setup-and-test
+
+      - name: Generate Xcode project
+        run: xcodegen --spec macos/project.yml --project macos
+
+      - name: Build app (Debug, unsigned)
+        run: |
+          xcodebuild -project "macos/CleanDock.xcodeproj" \
+            -scheme "CleanDock" \
+            -configuration Debug \
+            -derivedDataPath macos/build/dd \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      # The CLI is the LaunchAgent's execution path on MDM fleets - its
+      # exit-code contract (0 for help/version, 64 for usage errors) must
+      # not regress silently.
+      - name: CLI smoke test (exit-code contract)
+        run: |
+          CLI="macos/build/dd/Build/Products/Debug/cleandock"
+          "$CLI" --help > /dev/null
+          "$CLI" --version > /dev/null
+          set +e
+          "$CLI" definitely-not-a-command
+          code=$?
+          set -e
+          if [ "$code" -ne 64 ]; then
+            echo "error: expected exit 64 for an unknown command, got $code" >&2
+            exit 1
+          fi

@@ -1,0 +1,8 @@
+# Keeps the SHA-pinned actions from silently aging - the toolchain itself
+# (Xcode/XcodeGen) stays deliberately unpinned, see setup-and-test/action.yml.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

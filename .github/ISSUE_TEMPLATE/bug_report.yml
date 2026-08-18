@@ -1,0 +1,48 @@
+name: Bug report
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: CleanDock → About CleanDock
+      placeholder: "1.0.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "macOS 26.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: mdm
+    attributes:
+      label: MDM deployment?
+      description: Is CleanDock deployed via MDM on this Mac?
+      options:
+        - "No"
+        - "Yes (please name the MDM below)"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, what did you expect, what happened instead?
+      placeholder: |
+        1. …
+        2. …
+        3. …
+
+        Expected: …
+        Actual: …
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: MDM name, CLI output, screenshots, managed profile JSON, …

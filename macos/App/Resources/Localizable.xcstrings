@@ -1,0 +1,1726 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%lld apps": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld app"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld apps"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld App"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Apps"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld apps not installed - skipped": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld app not installed - skipped"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld apps not installed - skipped"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld App nicht installiert - übersprungen"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Apps nicht installiert - übersprungen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld selected": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ausgewählt"
+          }
+        }
+      }
+    },
+    "A backup of the Dock is written before every load; the ten most recent are kept. Restoring puts that Dock back - the current Dock is saved as a new backup first.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vor jedem Laden wird ein Backup des Docks angelegt; die zehn neuesten bleiben erhalten. Wiederherstellen setzt das Dock auf diesen Stand zurück - das aktuelle Dock wird vorher als neues Backup gesichert."
+          }
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Info"
+          }
+        }
+      }
+    },
+    "About CleanDock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über CleanDock"
+          }
+        }
+      }
+    },
+    "Add": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinzufügen"
+          }
+        }
+      }
+    },
+    "Add App": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App hinzufügen"
+          }
+        }
+      }
+    },
+    "Add a profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil hinzufügen"
+          }
+        }
+      }
+    },
+    "Add apps from the picker, drag them in from the Finder, or choose them from a file dialog.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Füge Apps über den Picker hinzu, ziehe sie aus dem Finder hierher oder wähle sie über den Dateidialog."
+          }
+        }
+      }
+    },
+    "Add apps to this profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps zu diesem Profil hinzufügen"
+          }
+        }
+      }
+    },
+    "Administrators can deploy read-only profiles to this folder via MDM.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administratoren können über MDM schreibgeschützte Profile in diesem Ordner bereitstellen."
+          }
+        }
+      }
+    },
+    "Adopt Current Dock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktuelles Dock übernehmen"
+          }
+        }
+      }
+    },
+    "Always in the Dock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immer im Dock"
+          }
+        }
+      }
+    },
+    "An Error Occurred": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Fehler ist aufgetreten"
+          }
+        }
+      }
+    },
+    "Applied: %lld apps": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Applied: %lld app"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Applied: %lld apps"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Angewendet: %lld App"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Angewendet: %lld Apps"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Applying this profile clears the left side of the Dock.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim Anwenden dieses Profils wird die linke Seite des Docks geleert."
+          }
+        }
+      }
+    },
+    "Ask Each Time": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immer nachfragen"
+          }
+        }
+      }
+    },
+    "Backup from %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backup vom %@"
+          }
+        }
+      }
+    },
+    "Backups": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backups"
+          }
+        }
+      }
+    },
+    "Buy me a coffee": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buy me a coffee"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        }
+      }
+    },
+    "Check Now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt prüfen"
+          }
+        }
+      }
+    },
+    "Check for Updates…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach Updates suchen…"
+          }
+        }
+      }
+    },
+    "Check for updates automatically": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch nach Updates suchen"
+          }
+        }
+      }
+    },
+    "Checking…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfe…"
+          }
+        }
+      }
+    },
+    "Choose a symbol": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Symbol auswählen"
+          }
+        }
+      }
+    },
+    "Choose from File Dialog…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über Dateidialog auswählen…"
+          }
+        }
+      }
+    },
+    "Clean Up Immediately": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofort aufräumen"
+          }
+        }
+      }
+    },
+    "Clean up the Dock right after installation?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock direkt nach der Installation aufräumen?"
+          }
+        }
+      }
+    },
+    "CleanDock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock"
+          }
+        }
+      }
+    },
+    "CleanDock can keep running in the menu bar so your profiles stay one click away.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock kann in der Menüleiste weiterlaufen - deine Profile bleiben einen Klick entfernt."
+          }
+        }
+      }
+    },
+    "CleanDock cleanup log": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock Cleanup-Protokoll"
+          }
+        }
+      }
+    },
+    "CleanDock is free and open source. Voluntary support keeps the project alive.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock ist kostenlos und Open Source. Freiwillige Unterstützung hält das Projekt am Leben."
+          }
+        }
+      }
+    },
+    "CleanDock is open source software under the MIT license.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock ist Open-Source-Software unter der MIT-Lizenz."
+          }
+        }
+      }
+    },
+    "CleanDock is up to date.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock ist aktuell."
+          }
+        }
+      }
+    },
+    "Date: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum: %@"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        }
+      }
+    },
+    "Delete Backups…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backups löschen…"
+          }
+        }
+      }
+    },
+    "Delete Profile…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil löschen…"
+          }
+        }
+      }
+    },
+    "Delete all Dock backups?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Dock-Backups löschen?"
+          }
+        }
+      }
+    },
+    "Delete profile “%@”?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil „%@“ löschen?"
+          }
+        }
+      }
+    },
+    "Delete…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen…"
+          }
+        }
+      }
+    },
+    "Deploy Only": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur bereitstellen"
+          }
+        }
+      }
+    },
+    "Dismiss": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausblenden"
+          }
+        }
+      }
+    },
+    "Dock updated": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock aktualisiert"
+          }
+        }
+      }
+    },
+    "Don’t ask again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr fragen"
+          }
+        }
+      }
+    },
+    "Don’t show this again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr anzeigen"
+          }
+        }
+      }
+    },
+    "Duplicate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplizieren"
+          }
+        }
+      }
+    },
+    "Duplicate as My Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als eigenes Profil duplizieren"
+          }
+        }
+      }
+    },
+    "Empty Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leeres Profil"
+          }
+        }
+      }
+    },
+    "Enjoying CleanDock?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gefällt dir CleanDock?"
+          }
+        }
+      }
+    },
+    "Export": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportieren"
+          }
+        }
+      }
+    },
+    "Export MDM Script": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MDM-Skript exportieren"
+          }
+        }
+      }
+    },
+    "Export Profile as JSON": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil als JSON exportieren"
+          }
+        }
+      }
+    },
+    "Finder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder"
+          }
+        }
+      }
+    },
+    "Finder and Trash are fixed parts of the Dock and are never changed by CleanDock.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder und Papierkorb sind feste Bestandteile des Docks und werden von CleanDock nie verändert."
+          }
+        }
+      }
+    },
+    "Found a bug or have an idea?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler gefunden oder eine Idee?"
+          }
+        }
+      }
+    },
+    "General": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allgemein"
+          }
+        }
+      }
+    },
+    "GitHub": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub"
+          }
+        }
+      }
+    },
+    "Hide “Recent Applications” in the Dock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "„Zuletzt benutzt“ im Dock ausblenden"
+          }
+        }
+      }
+    },
+    "Import Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil importieren"
+          }
+        }
+      }
+    },
+    "Import Profile…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil importieren…"
+          }
+        }
+      }
+    },
+    "In profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enthalten"
+          }
+        }
+      }
+    },
+    "Installed version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installierte Version"
+          }
+        }
+      }
+    },
+    "Keep Running in Menu Bar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Menüleiste weiterlaufen"
+          }
+        }
+      }
+    },
+    "Launch at login": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bei Anmeldung starten"
+          }
+        }
+      }
+    },
+    "License": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lizenz"
+          }
+        }
+      }
+    },
+    "Load Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil laden"
+          }
+        }
+      }
+    },
+    "Location": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speicherort"
+          }
+        }
+      }
+    },
+    "MDM Script (postinstall)…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MDM-Skript (postinstall)…"
+          }
+        }
+      }
+    },
+    "Managed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwaltet"
+          }
+        }
+      }
+    },
+    "Managed Profiles": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwaltete Profile"
+          }
+        }
+      }
+    },
+    "Managed profile - deployed by your administrator, read-only.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwaltetes Profil - von deiner Administration bereitgestellt, schreibgeschützt."
+          }
+        }
+      }
+    },
+    "Maybe Later": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vielleicht später"
+          }
+        }
+      }
+    },
+    "More": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mehr"
+          }
+        }
+      }
+    },
+    "More actions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Aktionen"
+          }
+        }
+      }
+    },
+    "My Dock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mein Dock"
+          }
+        }
+      }
+    },
+    "New Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neues Profil"
+          }
+        }
+      }
+    },
+    "No Apps in This Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Apps in diesem Profil"
+          }
+        }
+      }
+    },
+    "No Profile Selected": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Profil ausgewählt"
+          }
+        }
+      }
+    },
+    "No backup is available to restore.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es ist kein Backup zum Wiederherstellen vorhanden."
+          }
+        }
+      }
+    },
+    "No backups yet - one is created automatically before every load.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Backups - vor jedem Laden wird automatisch eines angelegt."
+          }
+        }
+      }
+    },
+    "No profile named “%@” was found.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es wurde kein Profil mit dem Namen „%@“ gefunden."
+          }
+        }
+      }
+    },
+    "No profiles yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Profile"
+          }
+        }
+      }
+    },
+    "No third-party frameworks are bundled - CleanDock uses only Apple system frameworks.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es sind keine Frameworks von Drittanbietern eingebunden - CleanDock verwendet ausschließlich Apple-Systemframeworks."
+          }
+        }
+      }
+    },
+    "Not installed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht installiert"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "Once a day, CleanDock asks GitHub for the latest release. No other data is sent - this is the app’s only network access and it stays off unless you enable it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einmal täglich fragt CleanDock bei GitHub nach der neuesten Version. Weitere Daten werden nicht übertragen - das ist der einzige Netzwerkzugriff der App und bleibt aus, solange du ihn nicht aktivierst."
+          }
+        }
+      }
+    },
+    "Open CleanDock…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock öffnen…"
+          }
+        }
+      }
+    },
+    "Open Source": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Source"
+          }
+        }
+      }
+    },
+    "Profile (JSON)…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil (JSON)…"
+          }
+        }
+      }
+    },
+    "Profile Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profilname"
+          }
+        }
+      }
+    },
+    "Profile “%@” has been applied.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil „%@“ wurde angewendet."
+          }
+        }
+      }
+    },
+    "Profile: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil: %@"
+          }
+        }
+      }
+    },
+    "Profiles": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile"
+          }
+        }
+      }
+    },
+    "Provider": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anbieter"
+          }
+        }
+      }
+    },
+    "Quit CleanDock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock beenden"
+          }
+        }
+      }
+    },
+    "Quit CleanDock completely?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CleanDock vollständig beenden?"
+          }
+        }
+      }
+    },
+    "Quit Completely": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollständig beenden"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernen"
+          }
+        }
+      }
+    },
+    "Remove from profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus dem Profil entfernen"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Umbenennen"
+          }
+        }
+      }
+    },
+    "Rename profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil umbenennen"
+          }
+        }
+      }
+    },
+    "Replace the Dock with %lld apps?": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Replace the Dock with %lld app?"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Replace the Dock with %lld apps?"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Dock wird durch %lld App ersetzt - fortfahren?"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Dock wird durch %lld Apps ersetzt - fortfahren?"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Replace the Dock with exactly the apps of this profile (⌘⏎)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock exakt durch die Apps dieses Profils ersetzen (⌘⏎)"
+          }
+        }
+      }
+    },
+    "Report a Problem…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Problem melden…"
+          }
+        }
+      }
+    },
+    "Restore": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederherstellen"
+          }
+        }
+      }
+    },
+    "Restore the Dock from the most recent backup": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock aus dem letzten Backup wiederherstellen"
+          }
+        }
+      }
+    },
+    "Restore the Dock from this backup?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock aus diesem Backup wiederherstellen?"
+          }
+        }
+      }
+    },
+    "Save as Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als Profil sichern"
+          }
+        }
+      }
+    },
+    "Search apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps durchsuchen"
+          }
+        }
+      }
+    },
+    "Select a profile in the sidebar or create a new one.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle ein Profil in der Seitenleiste oder erstelle ein neues."
+          }
+        }
+      }
+    },
+    "Set the macOS Dock from profiles - locally with one click, or fleet-wide via MDM.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das macOS-Dock über Profile setzen - lokal per Klick oder flottenweit per MDM."
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen…"
+          }
+        }
+      }
+    },
+    "Show in Finder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Finder zeigen"
+          }
+        }
+      }
+    },
+    "Show in menu bar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Menüleiste anzeigen"
+          }
+        }
+      }
+    },
+    "Show or hide the sidebar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seitenleiste ein- oder ausblenden"
+          }
+        }
+      }
+    },
+    "Show the cleanup log with details on skipped apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cleanup-Protokoll mit Details zu übersprungenen Apps anzeigen"
+          }
+        }
+      }
+    },
+    "Skipped: %lld apps (not installed)": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Skipped: %lld app (not installed)"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Skipped: %lld apps (not installed)"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Übersprungen: %lld App (nicht installiert)"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Übersprungen: %lld Apps (nicht installiert)"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Status": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        }
+      }
+    },
+    "Storage": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speicher"
+          }
+        }
+      }
+    },
+    "Support": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterstützen"
+          }
+        }
+      }
+    },
+    "Thank you for using CleanDock!": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Danke, dass du CleanDock verwendest!"
+          }
+        }
+      }
+    },
+    "Thanks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Danke"
+          }
+        }
+      }
+    },
+    "Thanks to everyone contributing issues, ideas and code - and to every supporter who keeps the project alive. ☕️": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Danke an alle, die Issues, Ideen und Code beitragen - und an alle Unterstützer, die das Projekt am Leben halten. ☕️"
+          }
+        }
+      }
+    },
+    "The Dock preferences could not be read, so no backup was possible. Nothing was changed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Dock-Einstellungen konnten nicht gelesen werden, daher war kein Backup möglich. Es wurde nichts geändert."
+          }
+        }
+      }
+    },
+    "The Dock preferences could not be synchronized.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Dock-Einstellungen konnten nicht synchronisiert werden."
+          }
+        }
+      }
+    },
+    "The Dock will be set to the state of %@. The current Dock is saved as a new backup first.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Dock wird auf den Stand vom %@ gesetzt. Das aktuelle Dock wird vorher als neues Backup gesichert."
+          }
+        }
+      }
+    },
+    "The backup file “%@” is not a valid Dock backup.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Backup-Datei „%@“ ist kein gültiges Dock-Backup."
+          }
+        }
+      }
+    },
+    "The current Dock is backed up first, so you can undo this.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das aktuelle Dock wird vorher gesichert - du kannst den Schritt rückgängig machen."
+          }
+        }
+      }
+    },
+    "The profile JSON is invalid: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Profil-JSON ist ungültig: %@"
+          }
+        }
+      }
+    },
+    "The profile will be removed permanently. Your Dock is not changed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Profil wird dauerhaft entfernt. Dein Dock bleibt unverändert."
+          }
+        }
+      }
+    },
+    "The script always deploys the profile to the managed profiles folder. It can additionally clean up the Dock right after enrollment - or the profile just waits in CleanDock to be applied manually.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Skript stellt das Profil immer im Ordner für verwaltete Profile bereit. Zusätzlich kann es das Dock direkt nach dem Enrollment aufräumen - oder das Profil wartet in CleanDock auf das manuelle Anwenden."
+          }
+        }
+      }
+    },
+    "The update check failed. Please try again later.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Update-Prüfung ist fehlgeschlagen. Bitte versuche es später erneut."
+          }
+        }
+      }
+    },
+    "This action must run in a user context.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Aktion muss in einem Benutzerkontext ausgeführt werden."
+          }
+        }
+      }
+    },
+    "This app is currently not installed on this Mac. It will be skipped - that is not an error.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese App ist auf diesem Mac derzeit nicht installiert. Sie wird übersprungen - das ist kein Fehler."
+          }
+        }
+      }
+    },
+    "This file is a Dock backup, not a profile. You can restore backups - or turn them into profiles - in Settings → Storage.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Datei ist ein Dock-Backup, kein Profil. Backups kannst du unter Einstellungen → Speicher wiederherstellen - oder dort in Profile umwandeln."
+          }
+        }
+      }
+    },
+    "Toggle Sidebar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seitenleiste ein-/ausblenden"
+          }
+        }
+      }
+    },
+    "Trash": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Papierkorb"
+          }
+        }
+      }
+    },
+    "Undo": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rückgängig"
+          }
+        }
+      }
+    },
+    "Update available: %@…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update verfügbar: %@…"
+          }
+        }
+      }
+    },
+    "Updates": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Updates"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "Version %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@"
+          }
+        }
+      }
+    },
+    "Version %@ is available.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ ist verfügbar."
+          }
+        }
+      }
+    },
+    "Version %@ is the latest release.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ ist die neueste Version."
+          }
+        }
+      }
+    },
+    "View Release": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Release anzeigen"
+          }
+        }
+      }
+    },
+    "View on GitHub": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf GitHub ansehen"
+          }
+        }
+      }
+    },
+    "When quitting with ⌘Q": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim Beenden mit ⌘Q"
+          }
+        }
+      }
+    },
+    "Without the menu bar icon, ⌘Q always quits the app completely.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ohne Menüleistensymbol beendet ⌘Q die App immer vollständig."
+          }
+        }
+      }
+    },
+    "You are using version %@.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du verwendest Version %@."
+          }
+        }
+      }
+    },
+    "no installed app with bundle ID “%@”": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine installierte App mit der Bundle-ID „%@“"
+          }
+        }
+      }
+    },
+    "no “%@.app” found in the standard application folders": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kein „%@.app“ in den Standard-App-Ordnern gefunden"
+          }
+        }
+      }
+    },
+    "path does not exist: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pfad existiert nicht: %@"
+          }
+        }
+      }
+    },
+    "“Undo” will not be available until the next cleanup.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "„Rückgängig“ ist erst nach dem nächsten Cleanup wieder verfügbar."
+          }
+        }
+      }
+    },
+    "⭐️ Star on GitHub": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⭐️ Auf GitHub sternen"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

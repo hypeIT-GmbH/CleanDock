@@ -1,0 +1,31 @@
+name: Setup and test
+description: Select Xcode, install XcodeGen, and run the CleanDockCore unit tests.
+
+runs:
+  using: composite
+  steps:
+    # Prefer Xcode 26.0; otherwise fall back to the newest 26.x the runner
+    # image ships.
+    - name: Select Xcode
+      shell: bash
+      run: |
+        if ! sudo xcode-select -s "/Applications/Xcode_26.0.app" 2>/dev/null; then
+          XC="$(ls -d /Applications/Xcode_26* 2>/dev/null | sort -V | tail -1)"
+          if [ -z "$XC" ]; then
+            echo "error: no Xcode 26.x found on this runner image" >&2
+            exit 1
+          fi
+          sudo xcode-select -s "$XC"
+        fi
+
+    # Deliberately unpinned: for a young project, tracking the runner's
+    # current toolchain (macos-latest, newest Xcode 26.x, latest XcodeGen)
+    # surfaces breakage early; release builds are produced locally by the
+    # maintainer, not by this pipeline.
+    - name: Install XcodeGen
+      shell: bash
+      run: brew install xcodegen
+
+    - name: Unit tests (CleanDockCore)
+      shell: bash
+      run: swift test --package-path macos/Core
