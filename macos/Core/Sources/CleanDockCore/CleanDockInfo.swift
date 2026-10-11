@@ -11,7 +11,7 @@ import os
 /// Central product constants shared by the app and the CLI.
 public enum CleanDockInfo {
     /// Keep in sync with `MARKETING_VERSION` in `project.yml`.
-    public static let version = "1.0.0"
+    public static let version = "1.0.1"
     public static let appBundleID = "de.hypeit.cleandock"
 
     /// Numeric, component-wise comparison of dotted version strings:
