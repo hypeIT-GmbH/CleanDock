@@ -66,10 +66,15 @@ private struct GeneralSettingsView: View {
     var body: some View {
         Form {
             Section {
-                Toggle("Launch at login", isOn: $launchAtLogin)
-                    .onChange(of: launchAtLogin) { _, enabled in
-                        setLaunchAtLogin(enabled)
+                Toggle(isOn: $launchAtLogin) {
+                    HStack(spacing: 6) {
+                        Text("Launch at login")
+                        InfoBadge(text: "Starts in the background - the window stays closed until you open CleanDock yourself.")
                     }
+                }
+                .onChange(of: launchAtLogin) { _, enabled in
+                    setLaunchAtLogin(enabled)
+                }
                 if let launchAtLoginError {
                     Text(launchAtLoginError)
                         .font(.caption)

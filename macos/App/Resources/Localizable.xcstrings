@@ -1351,6 +1351,16 @@
         }
       }
     },
+    "Starts in the background - the window stays closed until you open CleanDock yourself.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Startet im Hintergrund - das Fenster bleibt geschlossen, bis du CleanDock selbst öffnest."
+          }
+        }
+      }
+    },
     "Status": {
       "localizations": {
         "de": {

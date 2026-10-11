@@ -89,6 +89,52 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         }
+
+        // A login-item launch must start in the background: the user did
+        // not ask for a window, macOS merely started the app with the
+        // session. Close the main window SwiftUI presents at launch and
+        // fall back to the Dock-presence rules. Manual launches (Finder,
+        // Dock, Spotlight) keep opening the window as before.
+        if Self.isLoginItemLaunch {
+            Self.enterBackgroundPresence()
+            // SwiftUI may present the window only after this callback -
+            // the second pass on the next runloop turn catches that side
+            // too (same defensive pattern as the willClose observer above).
+            DispatchQueue.main.async {
+                MainActor.assumeIsolated {
+                    AppDelegate.enterBackgroundPresence()
+                }
+            }
+        }
+    }
+
+    /// True when this process was started as a login item: the opening
+    /// AppleEvent then carries the keyAELaunchedAsLogInItem attribute, which
+    /// user-initiated launches never do. "--simulate-login-launch" is a
+    /// manual-QA hook, because a real login launch cannot be triggered from
+    /// a terminal.
+    private static var isLoginItemLaunch: Bool {
+        if ProcessInfo.processInfo.arguments.contains("--simulate-login-launch") {
+            return true
+        }
+        guard let event = NSAppleEventManager.shared().currentAppleEvent,
+              event.eventClass == AEEventClass(kCoreEventClass),
+              event.eventID == AEEventID(kAEOpenApplication),
+              let property = event.paramDescriptor(forKeyword: AEKeyword(keyAEPropData))
+        else { return false }
+        return property.enumCodeValue == keyAELaunchedAsLogInItem
+    }
+
+    /// Closes the regular windows and re-applies the Dock-presence rules -
+    /// shared by "Keep Running in Menu Bar" and the login-item launch.
+    /// Deliberately not filtered on isVisible: at launch time the main
+    /// window may exist without being presented yet, and closing it then
+    /// prevents it from ever appearing.
+    private static func enterBackgroundPresence() {
+        for window in NSApp.windows where window.styleMask.contains(.closable) {
+            window.close()
+        }
+        refreshActivationPolicy()
     }
 
     /// Dock presence rule: with the menu bar icon enabled the app shows in
@@ -203,11 +249,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     /// Cancels termination but closes all regular windows and drops the
     /// Dock presence, so the app fully "disappears" into the menu bar.
     private func keepRunningInMenuBar(_ application: NSApplication) {
-        for window in application.windows
-        where window.isVisible && window.styleMask.contains(.closable) {
-            window.close()
-        }
-        Self.refreshActivationPolicy()
+        Self.enterBackgroundPresence()
     }
 }
 

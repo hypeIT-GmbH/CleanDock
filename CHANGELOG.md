@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Launching at login now starts CleanDock in the background - the main
+  window stays closed until it is opened manually
+
 ## [1.0.0] - 2026-08-18
 
 ### Added
@@ -45,4 +52,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PKG build with disabled bundle relocation; optional Developer ID
   signing and notarization scripts
 
+[Unreleased]: https://github.com/hypeIT-GmbH/CleanDock/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/hypeIT-GmbH/CleanDock/releases/tag/v1.0.0
